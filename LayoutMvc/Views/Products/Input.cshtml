@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Input";
+}
+
+<div>
+    @{
+        String msg = "INPUT PRODUCT";
+        Html.RenderPartial("TitlePage", msg);
+    }
+    <div class="p-3 overflow-y-scroll h-100vh mb-10">
+        <form method="post" action="/products/input">
+            <div class="mb-3">
+                <label for="Id" class="form-label">Id</label>
+                <input type="number" class="form-control" id="Id" name="Id">
+            </div>
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="Name" name="Name">
+            </div>
+            <div class="mb-3">
+                <label for="Categoty" class="form-label">Category</label>
+                <input type="text" class="form-control" id="Categoty" name="Category">
+            </div>
+            <div class="mb-3">
+                <label for="Description" class="form-label">Description</label>
+                <textarea class="form-control" id="Description" name="Description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="Price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="Price" name="Price">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+

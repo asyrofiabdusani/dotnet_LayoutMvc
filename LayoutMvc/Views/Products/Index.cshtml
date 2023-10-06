@@ -1,0 +1,33 @@
+﻿@model List<LayoutMvc.Models.Product>
+@{
+    ViewBag.Title = "Products";
+}
+@*<p>@Model[0].Id</p>
+    <p>@Model[0].Name</p>
+    <p>@Model[0].Description</p>
+    <p>@Model[0].Category</p>
+    <p>@Model[0].Price</p>*@
+
+<div>
+    @{
+        String msg = "PRODUCT PAGE";
+        Html.RenderPartial("TitlePage", msg);
+    }
+    <div class="p-3 overflow-y-scroll h-100vh mb-10">
+        <div class="absolute btm-0 right-0 me-3 mb-2">
+            <button type="submit" class="btn btn-primary">
+                <a href="/products/input" class="txt-white">Tambah</a>
+            </button>
+        </div>
+        @foreach (var item in Model)
+        {
+            <h3>@item.Name</h3>
+            <br />
+            <p>@item.Category</p>
+            <p>@item.Description</p>
+            <h6>Rp. @item.Price</h6>
+            <hr />
+        }
+        <div style="height:6em"></div>
+    </div>
+</div>

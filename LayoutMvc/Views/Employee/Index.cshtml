@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Employee";
+}
+
+<div>
+    @{
+        String msg = "INPUT EMPLOYEE DATA";
+        Html.RenderPartial("TitlePage", msg);
+    }
+    <div class="p-3 overflow-y-scroll h-100vh mb-10">
+        <form method="post" action="/employee/index">
+            <div class="mb-3">
+                <label for="Id" class="form-label">Id</label>
+                <input type="number" class="form-control" id="Id" name="Id">
+            </div>
+            <div class="mb-3">
+                <label for="Firstname" class="form-label">Firstname</label>
+                <input type="text" class="form-control" id="Firstname" name="Firstname">
+            </div>
+            <div class="mb-3">
+                <label for="LastName" class="form-label">LastName</label>
+                <input type="text" class="form-control" id="LastName" name="LastName">
+            </div>
+            <div class="mb-3">
+                <label for="Birth" class="form-label">Birthday</label>
+                <input type="date" class="form-control" id="Birth" name="Birth">
+            </div>
+            <div class="mb-3">
+                <label for="Street" class="form-label">Street</label>
+                <textarea class="form-control" id="Street" name="Street"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="Province" class="form-label">Province</label>
+                <input type="text" class="form-control" id="Province" name="Province"></input>
+            </div>
+            <div class="mb-3">
+                <label for="ZipCode" class="form-label">Zip Code</label>
+                <input type="number" class="form-control" id="ZipCode" name="ZipCode"></input>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div style="height:8em"></div>
+    </div>
+</div>
+
